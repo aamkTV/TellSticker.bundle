@@ -80,7 +80,6 @@ class TellStick:
 				self.UnLoadLibrary()
 				self.library = cdll.LoadLibrary(self.GetLibraryPath())
 			except OSError:
-				Log("TellSticker: Could not load TelldusCore library from \"" + self.GetLibraryPath() + "\"")
 				return 0
 			self.library.tdInit()
 		
