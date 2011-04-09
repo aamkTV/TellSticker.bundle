@@ -182,7 +182,8 @@ def switchDevice(sender, status, subtitle, summary):
 			Dict['TSLib'].GetErrorString(retval)
 		)
 	
-	setStatus(reverseStatus(Dict['TSLib'].GetDeviceStatusAsString(sender.itemTitle)),listitem)
+	setStatus(reverseStatus(Dict['TSLib'].GetDeviceStatusAsString(sender.itemTitle)),sender.title1,sender.title2)
+	return Redirect(APPLICATIONS_PREFIX)
 	
 def bellDevice(sender, status, subtitle, summary):
 	
